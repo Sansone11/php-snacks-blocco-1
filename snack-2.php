@@ -7,15 +7,26 @@ $age = $_GET['age'];
 
 $mailChecka = (strpos($email,'@'));
 $mailCheckb = (strpos($email,'.'));
-var_dump($mailChecka,$mailCheckb);
 
 if($mailChecka != false && $mailCheckb != false){
     $mailMsg = 'email ok';
 
 }else{
     $mailMsg = 'email errata';
-}
+};
+
+
+// if(is_string($age != true)){
+// $ageMessage = 'eta corretta';
+
+// }else{
+//     $ageMessage = 'eta errata';
+// };
+
 ?>
 <div>
 <?= $mailMsg ?>
+</div>
+<div>
+<?= $ageMessage ?>
 </div>
