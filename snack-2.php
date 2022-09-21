@@ -10,9 +10,12 @@ $mailCheckb = (strpos($email,'.'));
 var_dump($mailChecka,$mailCheckb);
 
 if($mailChecka != false && $mailCheckb != false){
-    echo 'email ok';
+    $mailMsg = 'email ok';
 
 }else{
-    echo 'email errata';
+    $mailMsg = 'email errata';
 }
 ?>
+<div>
+<?= $mailMsg ?>
+</div>
