@@ -16,17 +16,34 @@ if($mailChecka != false && $mailCheckb != false){
 };
 
 
-// if(is_string($age != true)){
-// $ageMessage = 'eta corretta';
+if(is_numeric($age)) {
+    $ageMessage = 'eta corretta';
+} else {
+    $ageMessage = 'eta errata';
+}
 
-// }else{
-//     $ageMessage = 'eta errata';
-// };
+if (strlen($name ) <= 3) {
+    $nameMessage = "nome non corretto";
+} else {
+    $nameMessage = "nome ok";
+}
+
+if($mailMsg =='email ok' && $ageMessage =='eta corretta'  && $nameMessage == 'nome ok'){
+    $userAccess = 'accesso riuscito';
+} else {
+    $userAccess ='accesso negato';
+}
 
 ?>
 <div>
-<?= $mailMsg ?>
+<!-- <?= $mailMsg ?>
 </div>
 <div>
 <?= $ageMessage ?>
+</div>
+<div>
+<?= $nameMessage  ?>
+</div> -->
+<div>
+<?= $userAccess ?>
 </div>
